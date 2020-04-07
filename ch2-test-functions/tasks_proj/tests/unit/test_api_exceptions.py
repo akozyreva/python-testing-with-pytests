@@ -2,12 +2,14 @@ import pytest
 import tasks
 
 
+@pytest.mark.smoke
 def test_add_raises():
     """add() should raise an exception with wrong type param."""
     with pytest.raises(TypeError):
         tasks.add(task="not a Task object")
 
-
+@pytest.mark.get
+@pytest.mark.smoke
 def test_start_tasks_db_raises():
     """ Make sure unsupproted db raises an exception. """
     with pytest.raises(ValueError) as excinfo:

@@ -8,3 +8,9 @@ for ability to change code on fly
 cd /path/to/code
 pip install -e ./tasks_proj/
 pip install --no-cache-dir ./tasks_proj/
+
+running tests with markers
+pytest -m "smoke" ch2-test-functions/tasks_proj/tests/unit/
+pytest -m "not get" ch2-test-functions/tasks_proj/tests/unit/
+pytest -m "smoke or get" ch2-test-functions/tasks_proj/tests/unit/
+pytest -m "smoke and get" ch2-test-functions/tasks_proj/tests/unit/
