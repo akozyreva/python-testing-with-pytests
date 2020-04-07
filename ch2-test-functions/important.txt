@@ -1,0 +1,10 @@
+for installing package
+
+cd /path/to/code
+pip install ./tasks_proj/
+pip install --no-cache-dir ./tasks_proj/
+
+for ability to change code on fly
+cd /path/to/code
+pip install -e ./tasks_proj/
+pip install --no-cache-dir ./tasks_proj/
