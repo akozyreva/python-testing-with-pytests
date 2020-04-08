@@ -33,7 +33,7 @@ Pytest Options
 | Option      | Description | Example |
 | ----------- | ----------- | -------- |
 | --collect-only| shows all modules and functions  | pytest tasks/ --collect-only |
-|-k <expression>| allows to select tests via expression | pytest tasks/ -k "asdict" --collect-only |
+|-k <expression>| allows to select tests via expression | pytest tasks/ -k "asdict" --collect-only  OR pytest -v --tb=no -k="add and get" --collect-only |
 |-m <decorator-name> | run tests with specified decorator | pytest tasks/ -m run_these_please |
 -x, -exitfirst | if used, running stops on 1 failure | pytest -x | 
 | -maxfail=num | max couts of tests, which can be failed | pytest -maxfail=2 |
@@ -46,4 +46,25 @@ Pytest Options
 | -v | allows to see add info | pytests -v |
 | -q | decreases info about test running to minimum | pytest -q |
 | -l | shows local variables, if test fails | pytest -l |
-| --durations=N | shows the N numbers slowest tests | pytest --durations=3# python-testing-with-pytests
+| --durations=N | shows the N numbers slowest tests | pytest --durations=3# python-testing-with-pytests |
+|-c <path-to-config-file/pytest.ini> | allows to specify path to pytest.ini file. by default it tries to find it in cur dir | pytest -v -m 'smoke' -c tests/pytest.ini  |
+|-rs| reason of skipping test | pytest -rs |
+| -s<another-option> | allows to know additional info about errors/passed, etc. | |
+
+For running single test 
+```
+pytest /path/to/<test-module-name>.py::<test-method>.py
+```
+For running class
+```
+pytest /path/to/<test-module-name>.py::<test-class>
+```
+For running method in class
+```
+pytest /path/to/<test-module-name>.py::<test-class>::<test-method>.py
+```
+In order to run parametrized function directly with parameteres
+(use quotes, if there're any spaces)
+```
+pytest -v "test_add_variety.py::test_add_3[sleep-None-False]"
+```
