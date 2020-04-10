@@ -14,6 +14,10 @@ How to activate virtualenv
 ```
 source <project-name>/bin/activate
 ```
+How to understand, that you're in venv
+```
+pip -V    
+```
 How to deactivate virtualenv
 ```
 deactivate
@@ -50,6 +54,7 @@ Pytest Options
 |-c <path-to-config-file/pytest.ini> | allows to specify path to pytest.ini file. by default it tries to find it in cur dir | pytest -v -m 'smoke' -c tests/pytest.ini  |
 |-rs| reason of skipping test | pytest -rs |
 | -s<another-option> | allows to know additional info about errors/passed, etc. | |
+|--setup-show | show log of fixtures, what they actually do | pytest --setup-show|
 
 For running single test 
 ```
