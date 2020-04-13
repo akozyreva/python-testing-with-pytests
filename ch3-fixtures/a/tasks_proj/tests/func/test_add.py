@@ -24,3 +24,12 @@ def test_added_task_has_id_set(init_tasks_db):
     task_from_db = tasks.get(task_id)
     # THEN task_id matches id field
     assert task_from_db.id == task_id
+
+
+def test_add_increases_count(db_with_3_tasks):
+    """Test tasks.add() affect on tasks.count()."""
+    # Given a db with 3 tasks
+    # When another tasks is added
+    tasks.add(Task('throw a party'))
+    # Then the count incerases by 1
+    assert tasks.count() == 4

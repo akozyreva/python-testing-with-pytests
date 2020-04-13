@@ -53,8 +53,9 @@ Pytest Options
 | --durations=N | shows the N numbers slowest tests | pytest --durations=3# python-testing-with-pytests |
 |-c <path-to-config-file/pytest.ini> | allows to specify path to pytest.ini file. by default it tries to find it in cur dir | pytest -v -m 'smoke' -c tests/pytest.ini  |
 |-rs| reason of skipping test | pytest -rs |
-| -s<another-option> | allows to know additional info about errors/passed, etc. | |
+| -s<another-option> | allows to know additional info about errors/passed, etc., to see print statements! | |
 |--setup-show | show log of fixtures, what they actually do | pytest --setup-show|
+|--fixtures <test-file>.py| allows to see all fixtures, which used in this test file | pytest --fixtures test_add.py |
 
 For running single test 
 ```
