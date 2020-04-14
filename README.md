@@ -74,3 +74,6 @@ In order to run parametrized function directly with parameteres
 ```
 pytest -v "test_add_variety.py::test_add_3[sleep-None-False]"
 ```
+## Important!
+By using a yield statement instead of return, all the code after the yield statement serves as the teardown code:
+When you use return, all code after return doesn't execute
