@@ -48,14 +48,16 @@ Pytest Options
 | --lf | allows to rerun failed tests | pytest --lf |
 | --ff | runs firstly 1 fail and then all other tests | pytest --ff |
 | -v | allows to see add info | pytests -v |
-| -q | decreases info about test running to minimum | pytest -q |
-| -l | shows local variables, if test fails | pytest -l |
+| -q | increases info about test running to minimum | pytest -q |
+| --showlocals -l | shows local variables, if test fails | pytest -l |
 | --durations=N | shows the N numbers slowest tests | pytest --durations=3# python-testing-with-pytests |
 |-c <path-to-config-file/pytest.ini> | allows to specify path to pytest.ini file. by default it tries to find it in cur dir | pytest -v -m 'smoke' -c tests/pytest.ini  |
 |-rs| reason of skipping test | pytest -rs |
 | -s<another-option> | allows to know additional info about errors/passed, etc., to see print statements! | |
 |--setup-show | show log of fixtures, what they actually do | pytest --setup-show|
 |--fixtures <test-file>.py| allows to see all fixtures, which used in this test file | pytest --fixtures test_add.py |
+|--cache-show | shows last failures info| pytest --cache-show |
+| --clear-cache | clear cache before session | pytest --clear-cache
 
 For running single test 
 ```
