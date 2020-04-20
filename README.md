@@ -57,7 +57,8 @@ Pytest Options
 |--setup-show | show log of fixtures, what they actually do | pytest --setup-show|
 |--fixtures <test-file>.py| allows to see all fixtures, which used in this test file | pytest --fixtures test_add.py |
 |--cache-show | shows last failures info| pytest --cache-show |
-| --clear-cache | clear cache before session | pytest --clear-cache
+| --clear-cache | clear cache before session | pytest --clear-cache |
+|--doctest-modules | allows to test function in docstrings | pytest --doctest-modules |
 
 For running single test 
 ```
