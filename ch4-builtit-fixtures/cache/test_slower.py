@@ -1,3 +1,4 @@
+"""Code of pytest slow plugin """
 from datetime import datetime
 from random import random
 import time
@@ -20,6 +21,6 @@ def check_duration(request, cache):
         assert this_duration <= last_duration * 2, errorstring    
 
 
-@pytest.mark.parametrize('i', range(5))
-def test_slow_stuff(i):
-    time.sleep(random())
+#@pytest.mark.parametrize('i', range(5))
+#def test_slow_stuff(i):
+#    time.sleep(random())
