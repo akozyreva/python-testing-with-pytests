@@ -32,7 +32,7 @@ Run one test
 
 ```$ pytest -v tasks/test_four.py::test_asdict```
 
-Pytest Options
+### Pytest Options
 
 | Option      | Description | Example |
 | ----------- | ----------- | -------- |
@@ -59,6 +59,20 @@ Pytest Options
 |--cache-show | shows last failures info| pytest --cache-show |
 | --clear-cache | clear cache before session | pytest --clear-cache |
 |--doctest-modules | allows to test function in docstrings | pytest --doctest-modules |
+
+### Debugging options.
+We can debug our tests, using built-it --pdb.
+With -x (1 failed tests) pdb opens for 1 failed test. Options:
+| Option      | Description | 
+| ----------- | ----------- | 
+| p/print expr | print the value of exp|
+|pp epxr | pretty prints the value of expr.|
+|l/list | list the point of failure and 5 lines of code above and below|
+| l/list begin, end | list specific line numbers. |
+|a/args | print args of current fnction |
+|u/up | Move up 1 level in the stack trace. |
+|d/down| Moves down 1 level in the stack trace.|
+|q| Quits the debugging session |
 
 For running single test 
 ```
